@@ -1,0 +1,21 @@
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="scaffolds.scss">
+
+<p id="notice"><%= notice %></p>
+
+<h1>Innovations</h1>
+
+  <% @innovations.each do |innovation| %>
+<div class="card" style="width: 18rem;">
+  <img src="<%= innovation.Photo %>" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= innovation.Titre %></h5>
+    <p class="card-text"><%= innovation.Description %></p>
+    <a href="#" class="btn btn-primary"><%= link_to 'Show', innovation %></a>
+  </div>
+</div>
+ <% end %>
+
+
+<br>
+
+<%= link_to 'New Innovation', new_innovation_path %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Domaine: MyString
+  Auteur: MyString
+  Titre: MyString
+  Date: 1
+  Photo: MyString
+  Description: MyText
+
+two:
+  Domaine: MyString
+  Auteur: MyString
+  Titre: MyString
+  Date: 1
+  Photo: MyString
+  Description: MyText

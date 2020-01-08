@@ -1,0 +1,3 @@
+class Innovation < ApplicationRecord
+	
+end

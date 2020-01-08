@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Domaine:</strong>
+  <%= @innovation.Domaine %>
+</p>
+
+<p>
+  <strong>Auteur:</strong>
+  <%= @innovation.Auteur %>
+</p>
+
+<p>
+  <strong>Titre:</strong>
+  <%= @innovation.Titre %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @innovation.Date %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <img src="<%= @innovation.Photo %>" style="width:50%">
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @innovation.Description %>
+</p>
+
+<%= link_to 'Edit', edit_innovation_path(@innovation) %> |
+<%= link_to 'Back', innovations_path %>
