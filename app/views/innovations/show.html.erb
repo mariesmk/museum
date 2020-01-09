@@ -1,6 +1,5 @@
 <p id="notice"><%= notice %></p>
-
-<p>
+<div class="fiche_oeuvre">
   <strong>Domaine:</strong>
   <%= @innovation.Domaine %>
 </p>
@@ -11,7 +10,7 @@
 </p>
 
 <p>
-  <strong>Titre:</strong>
+  <strong >Titre:</strong>
   <%= @innovation.Titre %>
 </p>
 
@@ -30,5 +29,6 @@
   <%= @innovation.Description %>
 </p>
 
-<%= link_to 'Edit', edit_innovation_path(@innovation) %> |
-<%= link_to 'Back', innovations_path %>
+<%= link_to 'Modifier', edit_innovation_path(@innovation),  class: 'bouton_modif btn btn-primary' %> 
+<%= link_to 'Retour', innovations_path,  class: 'bouton_retour btn btn-primary' %>
+</div>

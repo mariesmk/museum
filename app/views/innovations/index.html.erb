@@ -1,21 +1,35 @@
-<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="scaffolds.scss">
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:500, 700&display=swap" rel="scaffolds.scss">
+<link href="https://fonts.googleapis.com/css?family=Rubik:300&display=swap" rel="scaffolds.scss">
 
 <p id="notice"><%= notice %></p>
 
-<h1>Innovations</h1>
-
-  <% @innovations.each do |innovation| %>
-<div class="card" style="width: 18rem;">
-  <img src="<%= innovation.Photo %>" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title"><%= innovation.Titre %></h5>
-    <p class="card-text"><%= innovation.Description %></p>
-    <a href="#" class="btn btn-primary"><%= link_to 'Show', innovation %></a>
-  </div>
+<div class="title">
+<h1>Mus'Innovation</h1>
+<h2> conçu et pensé par Marie Simonek </h2>
 </div>
- <% end %>
 
 
-<br>
+<div class="container">
 
-<%= link_to 'New Innovation', new_innovation_path %>
+
+  <div class="row">
+    <% @innovations.each do |innovation| %>
+      <div class="card col-12 col-md-4" style="width: 18rem;">
+        <img src="<%= innovation.Photo %>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= innovation.Titre %></h5>
+          <p class="card-text"><%= innovation.Auteur%></p>
+          <%= link_to 'Découvrir'.html_safe, innovation, class: 'bouton_show btn btn-primary' %>
+        </div>
+      </div>
+    <% end %> 
+  </div>
+  <%= link_to 'Ajouter une innovation'.html_safe,new_innovation_path, class: 'bouton_new btn btn-primary' %>
+
+</div>
+
+
+
+
+

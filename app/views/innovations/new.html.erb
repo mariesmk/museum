@@ -1,5 +1,6 @@
-<h1>New Innovation</h1>
+<h1 class="new_innov">Ajouter votre nouvelle innovation</h1>
 
 <%= render 'form', innovation: @innovation %>
 
-<%= link_to 'Back', innovations_path %>
+
+ <%= link_to 'Retour au musée'.html_safe,  innovations_path, class: 'bouton_retourmusee btn btn-primary' %>

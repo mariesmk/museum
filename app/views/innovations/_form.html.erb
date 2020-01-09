@@ -1,47 +1,14 @@
-<%= form_with(model: innovation, local: true) do |form| %>
-  <% if innovation.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(innovation.errors.count, "error") %> prohibited this innovation from being saved:</h2>
+<div class="formulaire">
+<%= simple_form_for innovation do |f| %>
+  <%= f.input :Domaine %>
+  <%= f.input :Auteur%>
+  <%= f.input :Titre%>
+  <%= f.input :Date%>
+  <%= f.input :Photo%>
+  <%= f.input :Description%>
 
-      <ul>
-      <% innovation.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :Domaine %>
-    <%= form.text_field :Domaine %>
-  </div>
-
-  <div class="field">
-    <%= form.label :Auteur %>
-    <%= form.text_field :Auteur %>
-  </div>
-
-  <div class="field">
-    <%= form.label :Titre %>
-    <%= form.text_field :Titre %>
-  </div>
-
-  <div class="field">
-    <%= form.label :Date %>
-    <%= form.number_field :Date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :Photo %>
-    <%= form.text_field :Photo %>
-  </div>
-
-  <div class="field">
-    <%= form.label :Description %>
-    <%= form.text_area :Description %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <%= f.button :submit %>
   </div>
 <% end %>
+
+
